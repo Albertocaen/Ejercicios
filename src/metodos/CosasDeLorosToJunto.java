@@ -2,18 +2,12 @@ package metodos;
 
 import java.util.Scanner;
 
-public class CosasDeLoros {
+public class CosasDeLorosToJunto {
     // mejor con un Scanner estático
     public static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
-        // pido el peso del loro
-        double peso = pedirPeso();
-        // pido la edad del loro
-        int edad = pedirEdad();
-        // calculo la ración que hay que darle
-        double ración1 = calcularRacion(peso, edad);
-        // imprimir ración
-        imprimirRación(ración1);
+
+        imprimirRación(calcularRacion(pedirPeso(), pedirEdad()));
 
     }
 
