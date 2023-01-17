@@ -50,7 +50,7 @@ public class EjerciciosForAnidados {
         char c = sc.nextLine().charAt(0);
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                System.out.print(c);
+                System.out.print(c + "\t");
             }
             // cada vez que finaliza el bucle interno meto un salto de línea
             System.out.println();
@@ -63,9 +63,32 @@ public class EjerciciosForAnidados {
                 "carácter también introducido por teclado.";
         System.out.println(enunciado);
         // resolvemos este ejercicio
-
-
-
+        System.out.print("a:");
+        int a = sc.nextInt();
+        System.out.print("b:");
+        int b = sc.nextInt();sc.nextLine();
+        System.out.print("Carácter:");
+        char c = sc.nextLine().charAt(0);
+        // ahora tengo que ver cuál es la base (el número mayor) y cuál la altura (el menor)
+        int base, altura = 0;
+        if (a > b) {
+            base = a;
+            altura = b;
+        } else {
+            base = b;
+            altura = a;
+        }
+        // en base tengo ya el número mayor y en altura el menor
+        // ahora pinto el rectángulo:
+        // tantas filas como sea altura -> i (for externo)
+        for (int i = 0; i < altura; i++) {
+            // para cada fila, pinto tantos caracteres como la base
+            for (int j = 0; j < base; j++) {
+                System.out.print(c + "\t");
+            }
+            // cada vez que termino de pintar una fila, meto un salto de línea
+            System.out.println();
+        }
     }
 
     public static void ejercicio29() {
