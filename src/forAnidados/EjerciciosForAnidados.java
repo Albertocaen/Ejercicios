@@ -97,6 +97,14 @@ public class EjerciciosForAnidados {
                 "puedes usar el tabulador \\t).";
         System.out.println(enunciado);
         // resolvemos este ejercicio
+        System.out.print("Número:");
+        int n = sc.nextInt();sc.nextLine();
+        for (int i = 1; i <= n; i++) { // empiezo en 1 porque la tabla de multiplicar no empieza por 0
+            for (int j = 1; j <= 10; j++) {
+                System.out.print(i + " x " + j + " = " + (i*j) +"\t");
+            }
+            System.out.println();
+        }
     }
 
 
@@ -105,6 +113,14 @@ public class EjerciciosForAnidados {
                 "siendo n un número introducido por teclado, utilizando asteriscos (*).";
         System.out.println(enunciado);
         // resolvemos este ejercicio
+        System.out.print("n = ");
+        int n = sc.nextInt(); sc.nextLine();
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n - i; j++) {
+                System.out.print("*\t");
+            }
+            System.out.println();
+        }
 
 
     }
