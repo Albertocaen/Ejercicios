@@ -2,7 +2,7 @@ package arrays;
 
 import java.util.Arrays;
 
-public class Ejercicio22 {
+public class Ejercicio22enUnoSolo {
     public static void main(String[] args) {
 /*
 22. Haz un programa que realice lo siguiente:
@@ -27,28 +27,20 @@ visualizando los resultados en pantalla.
             System.out.println();
         }
 
-        // vamos a sumar las filas
+        // vamos a sumar las filas por un lado y columnas por otro
         int[] sumaFila = new int[5];
-        for (int i = 0; i < tabla.length; i++) {
-            int suma = 0;
-            for (int j = 0; j < tabla[i].length; j++) {
-                suma = suma + tabla[i][j];
-            }
-            // cada vez que termino de recorrer (sumar) una fila, guardo el resultado en el array sumaFila en la posición de esa fila
-            sumaFila[i] = suma;
-        }
-        System.out.println(Arrays.toString(sumaFila));
-
-        // ahora con las columnas
         int[] sumaColumna = new int[5];
         for (int i = 0; i < tabla.length; i++) {
-            int suma = 0;
+            int sumai = 0, sumaj = 0;
             for (int j = 0; j < tabla[i].length; j++) {
-                suma = suma + tabla[j][i];
+                sumai = sumai + tabla[i][j];
+                sumaj = sumaj + tabla[j][i];
             }
             // cada vez que termino de recorrer (sumar) una fila, guardo el resultado en el array sumaFila en la posición de esa fila
-            sumaColumna[i] = suma;
+            sumaFila[i] = sumai;
+            sumaColumna[i] = sumaj;
         }
+        System.out.println(Arrays.toString(sumaFila));
         System.out.println(Arrays.toString(sumaColumna));
 
     }
